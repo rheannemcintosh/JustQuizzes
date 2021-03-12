@@ -81,4 +81,12 @@ class QuizController extends Controller
     {
         //
     }
+
+    public function validateForm($request) {
+        return $this->validate($request, [
+            'name' => 'required|string',
+            'description' => 'required|min:3',
+            'minutes' => 'required|integer',
+        ]);
+    }
 }
