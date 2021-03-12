@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Quiz;
 
 class QuizController extends Controller
 {
@@ -34,7 +35,10 @@ class QuizController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $this->validateForm($request);
+        $quiz = (new Quiz)->storeQuiz($data);
+
+        return redirect()->back()->with('message', 'Quiz created');
     }
 
     /**
