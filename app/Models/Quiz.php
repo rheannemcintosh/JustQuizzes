@@ -30,4 +30,8 @@ class Quiz extends Model
         return Quiz::create($data);
     }
 
+    public function updateQuiz($data, $id) {
+        return Quiz::find($id)->update($data);
+    }
+
 }
