@@ -4,17 +4,18 @@
             <div class="span3">
                 <div class="sidebar">
                     <ul class="widget widget-menu unstyled">
-                        <li class="active"><a href="index.html"><i class="menu-icon icon-dashboard"></i>Dashboard
+                        <li class="active"><a href="{{ url('/') }}"><i class="menu-icon icon-dashboard"></i>Dashboard
                         </a></li>
-                        <li><a href="activity.html"><i class="menu-icon icon-bullhorn"></i>News Feed </a>
-                        </li>
-                        <li><a href="message.html"><i class="menu-icon icon-inbox"></i>Inbox <b class="label green pull-right">
-                            11</b> </a></li>
-                        <li><a href="task.html"><i class="menu-icon icon-tasks"></i>Tasks <b class="label orange pull-right">
-                            19</b> </a></li>
                     </ul>
-                    <!--/.widget-nav-->
-                    
+
+                    <ul class="widget widget-menu unstyled">
+                        <li>
+                            <a href="{{ route('quiz.index') }}"><i class="menu-icon icon-inbox"></i>View Quizzes </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('quiz.create') }}"><i class="menu-icon icon-bullhorn"></i>Create Quiz </a>
+                        </li>
+                    </ul>
                     
                     <ul class="widget widget-menu unstyled">
                         <li><a href="ui-button-icon.html"><i class="menu-icon icon-bold"></i> Buttons </a></li>
